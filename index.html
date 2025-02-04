@@ -4,62 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Sostenibilidad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>@import url(https://fonts.bunny.net/css?family=montserrat:400,700);</style>
     <style>
-        /* Incluyo aquí todo tu CSS proporcionado */
-        #_form_1_{font-size:14px;line-height:1.6;font-family:arial, helvetica, sans-serif;margin:0}
-        #_form_1_ *{outline:0}
-        /* Puedes agregar aquí el resto del CSS que compartiste */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #436c3b;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+            color: #7ea54a;
+        }
+
+        input[type="text"], input[type="email"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            background-color: #3eb1d1;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #3498b8;
+        }
     </style>
 </head>
 <body>
-    <!-- Aquí va tu formulario tal cual lo proporcionaste -->
-    <form method="POST" action="https://hins.activehosted.com/proc.php" id="_form_1_" class="_form _form_1 _inline-form  _dark" novalidate data-styles-version="5">
-        <input type="hidden" name="u" value="1" />
-        <input type="hidden" name="f" value="1" />
-        <input type="hidden" name="s" />
-        <input type="hidden" name="c" value="0" />
-        <input type="hidden" name="m" value="0" />
-        <input type="hidden" name="act" value="sub" />
-        <input type="hidden" name="v" value="2" />
-        <input type="hidden" name="or" value="9a323e25-5f1a-4459-b3ae-e1676aa0c02e" />
+    <div class="form-container">
+        <h1>Formulario de Sostenibilidad</h1>
+        <form method="POST" action="https://hins.activehosted.com/proc.php" id="_form_1_" novalidate>
+            <label for="fullname">Nombre completo</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Escriba su nombre" required>
 
-        <div class="_form-content">
-            <div class="_form_element _x26537143 _full_width _clear">
-                <div class="_form-title">Completa el siguiente formulario</div>
-            </div>
-            
-            <div class="_form_element _x63287970 _full_width">
-                <label for="fullname" class="_form-label">Nombre completo</label>
-                <div class="_field-wrapper">
-                    <input type="text" id="fullname" name="fullname" placeholder="Escriba su nombre" />
-                </div>
-            </div>
+            <label for="email">Correo electrónico*</label>
+            <input type="email" id="email" name="email" placeholder="Escriba su correo electrónico" required>
 
-            <div class="_form_element _x75743713 _full_width">
-                <label for="email" class="_form-label">Correo electrónico*</label>
-                <div class="_field-wrapper">
-                    <input type="text" id="email" name="email" placeholder="Escriba su correo electrónico" required />
-                </div>
-            </div>
+            <label for="customer_account">Cuenta*</label>
+            <input type="text" id="customer_account" name="customer_account" placeholder="Nombre de la Empresa" required>
 
-            <div class="_form_element _x75012276 _full_width">
-                <label for="customer_account" class="_form-label">Cuenta*</label>
-                <div class="_field-wrapper">
-                    <input type="text" id="customer_account" name="customer_account" placeholder="Escribe el nombre de tu Empresa/Organización" required />
-                </div>
-            </div>
+            <label for="industry">Industrial/Vertical</label>
+            <select id="industry" name="industry">
+                <option value="">Seleccione una opción</option>
+                <option value="Consultoría/Agencia">Consultoría/Agencia</option>
+                <option value="E-commerce">E-commerce</option>
+                <option value="Cuidado sanitario">Cuidado sanitario</option>
+                <option value="Sin ánimo de lucro">Sin ánimo de lucro</option>
+                <option value="Otro">Otro</option>
+            </select>
 
-            <div class="_button-wrapper _full_width">
-                <button id="_form_1_submit" class="_submit" type="submit">Enviar</button>
-            </div>
-        </div>
+            <label>¿La empresa cuenta con políticas para reducir su huella de carbono?</label>
+            <input type="radio" id="carbono_si" name="huella_carbono" value="Si" required>
+            <label for="carbono_si">Sí</label>
+            <input type="radio" id="carbono_no" name="huella_carbono" value="No">
+            <label for="carbono_no">No</label>
 
-        <div class="_form-thank-you" style="display:none;"></div>
-    </form>
+            <label>¿Gestionan el impacto ambiental de proveedores?</label>
+            <input type="radio" id="proveedores_si" name="impacto_proveedores" value="Si" required>
+            <label for="proveedores_si">Sí</label>
+            <input type="radio" id="proveedores_no" name="impacto_proveedores" value="No">
+            <label for="proveedores_no">No</label>
 
-    <script>
-        // Incluyo aquí tu JavaScript proporcionado para la lógica del formulario
-    </script>
+            <label>¿Tienen políticas de diversidad e inclusión?</label>
+            <input type="radio" id="diversidad_si" name="diversidad" value="Si" required>
+            <label for="diversidad_si">Sí</label>
+            <input type="radio" id="diversidad_no" name="diversidad" value="No">
+            <label for="diversidad_no">No</label>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
 </body>
 </html>
+
