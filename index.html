@@ -6,110 +6,13 @@
     <title>Formulario de Sostenibilidad</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>@import url(https://fonts.bunny.net/css?family=montserrat:400,700);</style>
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .form-container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            width: 100%;
-        }
-
-        h1 {
-            text-align: center;
-            color: #436c3b;
-            margin-bottom: 20px;
-        }
-
-        label {
-            font-weight: bold;
-            display: block;
-            margin-top: 15px;
-            color: #7ea54a;
-        }
-
-        input[type="text"], input[type="email"], select, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-
-        button[type="submit"] {
-            width: 100%;
-            background-color: #3eb1d1;
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-
-        button[type="submit"]:hover {
-            background-color: #3498b8;
-        }
-    </style>
 </head>
 <body>
     <div class="form-container">
         <h1>Formulario de Sostenibilidad</h1>
-        <form method="POST" action="https://hins.activehosted.com/proc.php" id="_form_1_" novalidate>
-            <label for="fullname">Nombre completo</label>
-            <input type="text" id="fullname" name="fullname" placeholder="Escriba su nombre" required>
-
-            <label for="email">Correo electrónico*</label>
-            <input type="email" id="email" name="email" placeholder="Escriba su correo electrónico" required>
-
-            <label for="customer_account">Cuenta*</label>
-            <input type="text" id="customer_account" name="customer_account" placeholder="Nombre de la Empresa" required>
-
-            <label for="industry">Industrial/Vertical</label>
-            <select id="industry" name="industry">
-                <option value="">Seleccione una opción</option>
-                <option value="Consultoría/Agencia">Consultoría/Agencia</option>
-                <option value="E-commerce">E-commerce</option>
-                <option value="Cuidado sanitario">Cuidado sanitario</option>
-                <option value="Sin ánimo de lucro">Sin ánimo de lucro</option>
-                <option value="Otro">Otro</option>
-            </select>
-
-            <label>¿La empresa cuenta con políticas para reducir su huella de carbono?</label>
-            <input type="radio" id="carbono_si" name="huella_carbono" value="Si" required>
-            <label for="carbono_si">Sí</label>
-            <input type="radio" id="carbono_no" name="huella_carbono" value="No">
-            <label for="carbono_no">No</label>
-
-            <label>¿Gestionan el impacto ambiental de proveedores?</label>
-            <input type="radio" id="proveedores_si" name="impacto_proveedores" value="Si" required>
-            <label for="proveedores_si">Sí</label>
-            <input type="radio" id="proveedores_no" name="impacto_proveedores" value="No">
-            <label for="proveedores_no">No</label>
-
-            <label>¿Tienen políticas de diversidad e inclusión?</label>
-            <input type="radio" id="diversidad_si" name="diversidad" value="Si" required>
-            <label for="diversidad_si">Sí</label>
-            <input type="radio" id="diversidad_no" name="diversidad" value="No">
-            <label for="diversidad_no">No</label>
-
-            <button type="submit">Enviar</button>
-        </form>
+        <!-- Código de inserción del formulario desde ActiveCampaign -->
+        <div class="_form_1"></div>
+        <script src="https://hins.activehosted.com/f/embed.php?id=1" charset="utf-8"></script>
     </div>
 </body>
 </html>
-
